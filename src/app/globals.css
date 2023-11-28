@@ -2,26 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+html {
+  @media (max-width: 1290px) {
+    font-size: 93.75%;
+  }
+  @media (max-width: 1000px) {
+    font-size: 87.50%;
+  }
+  @media (max-height: 650px) {
+    font-size: 93.75%;
   }
 }
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  -webkit-font-smoothing: antialiased;
+  background: #FFFFFF;
+}
+body, input, textarea, button {
+  font-family: 'Prompt', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+button, a {
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background: none;
+}
+fieldset {
+  border: none;
+  outline: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+[disabled] {
+  cursor: not-allowed;
+}
+
+*::-webkit-scrollbar {
+  width: 4px;
+}
+*::-webkit-scrollbar-track {
+  background: gray;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 0;
 }
